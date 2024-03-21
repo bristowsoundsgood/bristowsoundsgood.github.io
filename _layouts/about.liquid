@@ -3,10 +3,13 @@ layout: default
 ---
 <div class="post">
   <header class="post-header">
+  <!-- Move the title a few lines down -->
+   <div style="margin-top: 200px;"></div>
     <h1 class="post-title">
       {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
+        <span class="font-weight-bold">{{ site.first_name }}</span>
+        <span class="font-weight-bold">{{ site.middle_name }}</span>
+        <span class="font-weight-bold">{{ site.last_name }}</span>
       {% else %}
         {{ site.title }}
       {% endif %}
@@ -49,7 +52,7 @@ layout: default
     {% endif %}
 
     <!-- Latest posts -->
-    {% if site.latest_posts.enabled %}
+    {% if page.latest_posts %}
       <h2>
         <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
       </h2>
